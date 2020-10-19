@@ -20,7 +20,7 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3 bg-dark">
       <div class="container">
-        <a style="color: white" class="navbar-brand" href="#">logo</a>
+        <img class="navbar-brand" src="images/logo.png" alt="logo" width="10%">
         <button
           class="navbar-toggler"
           data-toggle="collapse"
@@ -33,107 +33,66 @@
             <li class="nav-item">
               <a
                 style="color: white"
-                class="nav-link text-muted"
+                class="nav-link text-muted p-4"
                 href="home.html"
                 >Home</a
               >
             </li>
             <li class="nav-item">
-              <a style="color: white" class="nav-link text-muted" href="#"
+              <a
+                style="color: white"
+                class="nav-link text-muted p-4"
+                href="pagina2.html"
                 >Experience</a
               >
             </li>
             <li class="nav-item">
-              <a style="color: white" class="nav-link text-muted" href="#"
+              <a
+                style="color: white"
+                class="nav-link text-muted p-4"
+                href="pagina3.html"
                 >Comments</a
               >
-            </li>
-            <li class="nav-item">
-              <a
-                style="color: white"
-                class="btn btn-sm btn-social btn-fb"
-                href="https://www.facebook.com/share"
-                target="_blank"
-                title="Share on Facebook"
-              >
-                <i class="fab fa-facebook-square" aria-hidden="true"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a
-                style="color: white"
-                class="btn btn-sm btn-social btn-tw"
-                href="https://twitter.com/intent/tweet?text=PAGE_TITLE&amp;url=PAGE_URL"
-                target="_blank"
-                title="Share on Twitter"
-              >
-                <i class="fab fa-twitter" aria-hidden="true"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a
-                style="color: white"
-                class="btn btn-sm btn-social btn-in"
-                href="https://www.linkedin.com/shareArticle?mini=true&amp;url=PAGE_URL&amp;title=PAGE_TITLE"
-                target="_blank"
-                title="Share Guldensporencollege on LinkedIn"
-              >
-                <i
-                  class="fab fa-linkedin-in"
-                  data-fa-transform="grow-2"
-                  aria-hidden="true"
-                ></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a
-                style="color: white"
-                class="btn btn-sm btn-social btn-gp"
-                href="https://plus.google.com/share?url=PAGE_URL"
-                target="_blank"
-                title="Share Guldensporencollege on Google Plus"
-              >
-                <i
-                  class="fab fa-google-plus-g"
-                  data-fa-transform="grow-2"
-                  aria-hidden="true"
-                ></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a
-                style="color: white"
-                class="btn btn-sm btn-social btn-rd"
-                href="https://www.reddit.com/submit?url=PAGE_URL&amp;title=PAGE_TITLE"
-                target="_blank"
-                title="Share Guldensporencollege on Reddit"
-              >
-                <i
-                  class="fab fa-reddit-alien"
-                  data-fa-transform="grow-4"
-                  aria-hidden="true"
-                ></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a
-                style="color: white"
-                class="btn btn-sm btn-social btn-hn"
-                href="https://news.ycombinator.com/submitlink?u=PAGE_URL&amp;t=PAGE_TITLE"
-                target="_blank"
-                title="Share Guldensporencollege on Hacker News"
-              >
-                <i
-                  class="fab fa-hacker-news"
-                  data-fa-transform="grow-4"
-                  aria-hidden="true"
-                ></i>
-              </a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+    <article class="container">
+      <div>
+        <div class="clearfix">
+        <h3 class="float-left">Reis naar Polen</h3>
+        <a class="btn btn-outline-dark float-right" href="pagina2.html">Lees meer</a>
+       </div>
+        <hr>
+        <div id="slider1" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active"><img class="w-75 mb-3" src="images/polen1.jpg" alt="polen1"></div>
+            <div class="carousel-item"><img class="w-75 mb-3" src="images/polen2.jpg" alt="polen2" /></div>
+            <div class="carousel-item"><img class="w-75 mb-3" src="images/polen3.jpg" alt="polen3" /></div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="clearfix">
+          <div class="clearfix">
+          <h3 class="float-right">Gaming</h3>
+          <a class="btn btn-outline-dark float-left" href="pagina2.html">Lees meer</a>
+         </div>
+        <hr>
+        <img class="float-right w-75 ml-3" src="images/gamen.jpg" alt="game">
+      </div>
+      <hr>
+      <div class="clearfix">
+        <div class="clearfix">
+        <h3 class="float-right">Kippen</h3>
+        <a class="btn btn-outline-dark float-left" href="pagina2.html">Lees meer</a>
+       </div>
+      <hr>
+      <img class="w-50 ml-3" src="images/kiekens.jpg" alt="kippen">
+    </div>
+    <hr>
+    </article>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -153,5 +112,19 @@
       src="https://kit.fontawesome.com/aec928fd26.js"
       crossorigin="anonymous"
     ></script>
+    <script>
+      $('.carousel').carousel({
+        interval: 2000,
+        keyboard: true,
+        pause: 'hover',
+        wrap: true
+      });
+      $('#slider4').on('slide.bs.carousel', function() {
+        console.log('SLIDE !');
+      });
+      $('#slider4').on('slid.bs.carousel', function() {
+        console.log('SLID !');
+      });
+    </script>
   </body>
 </html>
